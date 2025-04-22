@@ -143,7 +143,7 @@ elif choice == "Store Data":
 
 
 # === data store section ===
-elif choice == "Retieve Data":
+elif choice == "Retrive Data":
     if not st.session_state.authenticated_user:
         st.warning("🔓 Please login first")
 
@@ -159,13 +159,13 @@ elif choice == "Retieve Data":
                 st.code(item,language="text") 
 
             encrypted_input = st.text_area("Enter Encrypt Text")
-            passkey =st.text_input("Enter Passkey T Decrypt ", type = "paaword")
+            passkey = st.text_input("Enter Passkey To Decrypt", type="password")
 
 
             if st.button("Decrypt"):
                 result = decrypt_text(encrypted_input, passkey)
                 if result:
-                    st.sucess(f"✅ Decrypted : {result}")
+                    st.success(f"✅ Decrypted : {result}")
 
                 else:
                     st.error("❌ Incorrect passkey or corrupted data.")    
