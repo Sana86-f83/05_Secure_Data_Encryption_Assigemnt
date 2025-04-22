@@ -153,6 +153,8 @@ elif choice == "Retieve Data":
 
         if not user_data:
             st.info("No Data Enteries:")
+        else:
+            st.write(" Encrypt Data Entries:")    
             for i , item in enumerate(user_data):
                 st.code(item,language="text") 
 
